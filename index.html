@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刷卡機操作指南 | 數位教育訓練</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 自訂漸層背景與過場動畫 */
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* 隱藏捲軸但保留捲動功能 (視覺更簡潔) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- 導覽列 -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-credit-card text-blue-600 text-xl"></i>
+                    <span class="font-bold text-lg text-slate-800">店務培訓中心</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#menu-intro" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">選單介紹</a>
+                    <a href="#transaction-demo" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">交易示範</a>
+                    <a href="#receipt-guide" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">簽單解析</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 標題區 (Hero Section) -->
+    <header class="bg-gradient-brand text-white py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                POS 刷卡機操作指南
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+                三分鐘快速掌握機台選單、常見交易流程與簽單辨識，讓結帳流程順暢無阻。
+            </p>
+            <a href="#menu-intro" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 transition shadow-lg hover:shadow-xl">
+                開始學習 <i class="fa-solid fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Section 1: 刷卡機選單 -->
+        <section id="menu-intro" class="scroll-mt-20">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Step 1</span>
+                <h2 class="text-3xl font-bold text-slate-800 mt-2">認識刷卡機主選單</h2>
+                <div class="h-1 w-16 bg-blue-500 rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <div class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 group relative">
+                    <!-- 已更新為 mp4 -->
+                    <video controls muted preload="metadata" class="w-full h-full object-cover">
+                        <source src="刷卡機選單.mp4" type="video/mp4">
+                        您的瀏覽器不支援影片播放。
+                    </video>
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+                        <i class="fa-solid fa-play text-white text-4xl"></i>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex flex-col justify-center space-y-6">
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        按 <span class="bg-green-100 text-green-800 px-2 py-1 rounded font-bold mx-1 border border-green-200">右下角綠色鍵</span>，會出現主選單，所有功能都集中在此。
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center border border-blue-200 mt-1">
+                                <i class="fa-solid fa-1 text-blue-600 text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-slate-800 font-semibold text-lg">交易選單</h4>
+                                <p class="text-slate-500 text-sm mt-1">點擊進入後，會看見常使用的 <span class="text-red-500 font-medium">取消</span>、<span class="text-blue-500 font-medium">退貨</span> 等功能。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center border border-blue-200 mt-1">
+                                <i class="fa-solid fa-2 text-blue-600 text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-slate-800 font-semibold text-lg">銀聯卡</h4>
+                                <p class="text-slate-500 text-sm mt-1">點擊進入後，會看見關於銀聯的各項功能 (如：銀聯取消、銀聯退貨)。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center border border-blue-200 mt-1">
+                                <i class="fa-solid fa-3 text-blue-600 text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-slate-800 font-semibold text-lg">查詢列印</h4>
+                                <p class="text-slate-500 text-sm mt-1">包含重印簽單、明細查詢、報表列印等功能。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center border border-blue-200 mt-1">
+                                <i class="fa-solid fa-4 text-blue-600 text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-slate-800 font-semibold text-lg">結帳</h4>
+                                <p class="text-slate-500 text-sm mt-1">點擊進入後，可手動連動結帳。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 實際交易流程 -->
+        <section id="transaction-demo" class="scroll-mt-20">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Step 2</span>
+                <h2 class="text-3xl font-bold text-slate-800 mt-2">常見交易流程示範</h2>
+                <div class="h-1 w-16 bg-blue-500 rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <!-- 分頁選單 (Tabs) -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-slate-100 p-1 rounded-xl inline-flex space-x-1 border border-slate-200">
+                    <button onclick="openTab(event, 'tab-installment')" class="tab-btn active px-6 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none bg-white text-slate-900 shadow-sm" id="btn-installment">
+                        <i class="fa-solid fa-pen-nib mr-2"></i>分期 + 電子簽名
+                    </button>
+                    <button onclick="openTab(event, 'tab-unionpay')" class="tab-btn px-6 py-2.5 rounded-lg text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors duration-200 focus:outline-none" id="btn-unionpay">
+                        <i class="fa-brands fa-alipay mr-2"></i>銀聯卡 + 免簽
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab 1 內容: 分期+電子簽名 -->
+            <div id="tab-installment" class="tab-content active bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fa-solid fa-money-bill-transfer text-blue-500 mr-3"></i>分期付款與電子簽名流程
+                        </h3>
+                        <ol class="relative border-l border-slate-200 ml-3 space-y-6">
+                            <li class="pl-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+                                    <i class="fa-solid fa-check text-blue-600 text-[10px]"></i>
+                                </span>
+                                <h4 class="font-semibold text-slate-800">POS 拋轉金額</h4>
+                                <p class="text-sm text-slate-500 mt-1">POS 機將金額傳送至刷卡機，畫面會顯示該筆消費金額。</p>
+                            </li>
+                            <li class="pl-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+                                    <i class="fa-solid fa-check text-blue-600 text-[10px]"></i>
+                                </span>
+                                <h4 class="font-semibold text-slate-800">輸入分期期數</h4>
+                                <p class="text-sm text-slate-500 mt-1">顧客選擇分期付款後，在鍵盤上輸入該筆交易的「分期期數」，並按下綠色確認鍵。</p>
+                            </li>
+                            <li class="pl-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+                                    <i class="fa-solid fa-check text-blue-600 text-[10px]"></i>
+                                </span>
+                                <h4 class="font-semibold text-slate-800">電子簽名</h4>
+                                <p class="text-sm text-slate-500 mt-1">交易核准後，請顧客直接於刷卡機螢幕上進行簽名，完成後點擊確認。</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200">
+                            <!-- 已更新為 mp4 -->
+                            <video controls preload="metadata" class="w-full h-auto max-h-[500px] object-cover bg-black">
+                                <source src="刷卡交易範例-分期+電子簽名.mp4" type="video/mp4">
+                                您的瀏覽器不支援影片播放。
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2 內容: 銀聯+免簽 -->
+            <div id="tab-unionpay" class="tab-content bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <i class="fa-solid fa-credit-card text-blue-500 mr-3"></i>銀聯卡交易流程 (免簽名)
+                        </h3>
+                        <ol class="relative border-l border-slate-200 ml-3 space-y-6">
+                            <li class="pl-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+                                    <i class="fa-solid fa-check text-blue-600 text-[10px]"></i>
+                                </span>
+                                <h4 class="font-semibold text-slate-800">感應/插卡</h4>
+                                <p class="text-sm text-slate-500 mt-1">選擇銀聯卡交易後，請顧客進行感應或插卡。</p>
+                            </li>
+                            <li class="pl-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
+                                    <i class="fa-solid fa-check text-blue-600 text-[10px]"></i>
+                                </span>
+                                <h4 class="font-semibold text-slate-800">密碼確認畫面</h4>
+                                <p class="text-sm text-slate-500 mt-1">按完密碼後，畫面會出現停留提示。</p>
+                                <div class="mt-4 p-4 bg-orange-50 border border-orange-100 rounded-xl flex items-start">
+                                    <i class="fa-solid fa-triangle-exclamation text-orange-500 mt-1 mr-3"></i>
+                                    <p class="text-sm text-orange-800">
+                                        <strong>重點提醒：</strong>此畫面是待顧客確認。操作員可手動按<span class="font-bold text-green-700 bg-green-100 px-1 rounded mx-1">右下角綠色鍵</span>，或等待數秒後結束畫面，即可完成交易。
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 bg-black">
+                            <!-- 已更新為 mp4 -->
+                            <video controls preload="metadata" class="w-full h-auto max-h-[350px] object-cover">
+                                <source src="刷卡交易範例-銀聯+免簽.mp4" type="video/mp4">
+                                您的瀏覽器不支援影片播放。
+                            </video>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 bg-white relative">
+                            <img src="銀聯刷卡-按完密碼後的停留畫面，仍需手動按確認.jpg" alt="銀聯刷卡密碼停留畫面" class="w-full h-auto object-cover max-h-[200px]" onerror="this.src='https://placehold.co/600x200/e2e8f0/64748b?text=Please+Upload+Image'">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white text-sm">
+                                👆 顧客按完密碼後的停留畫面
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 認識簽單 -->
+        <section id="receipt-guide" class="scroll-mt-20">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Step 3</span>
+                <h2 class="text-3xl font-bold text-slate-800 mt-2">如何辨識信用卡簽單？</h2>
+                <div class="h-1 w-16 bg-blue-500 rounded-full mx-auto mt-4 mb-6"></div>
+                <p class="text-slate-500 max-w-2xl mx-auto">不同的交易類型會產出不同格式的簽單，請務必核對重要資訊。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 卡片 1: 一般刷卡 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                    <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
+                        <img src="信用卡簽單_一般刷卡.jpg" alt="一般刷卡簽單" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/f1f5f9/94a3b8?text=Image+Missing'">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 border-b pb-2">一般刷卡</h3>
+                    <ul class="text-slate-600 space-y-2 text-sm leading-relaxed">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>卡號 (Card No)</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>授權碼 (Auth Code)</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>序號 (Trace No)</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>調閱編號</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>端末機代號 (Term ID)</li>
+                    </ul>
+                </div>
+
+                <!-- 卡片 2: 分期刷卡 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                    <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
+                        <img src="信用卡簽單_分期刷卡.jpg" alt="分期刷卡簽單" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/f1f5f9/94a3b8?text=Image+Missing'">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 border-b pb-2">分期刷卡</h3>
+                    <ul class="text-slate-600 space-y-2 text-sm leading-relaxed">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>包含一般刷卡所有資訊</li>
+                        <li><i class="fa-solid fa-circle-check text-blue-500 mr-2"></i><strong>分期期數</strong> (如：3期)</li>
+                        <li><i class="fa-solid fa-circle-check text-blue-500 mr-2"></i><strong>首期金額</strong></li>
+                        <li><i class="fa-solid fa-circle-check text-blue-500 mr-2"></i><strong>每期金額</strong></li>
+                    </ul>
+                </div>
+
+                <!-- 卡片 3: 紅利刷卡 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                    <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
+                        <img src="信用卡簽單_紅利刷卡.jpg" alt="紅利刷卡簽單" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/f1f5f9/94a3b8?text=Image+Missing'">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 border-b pb-2">紅利扣抵刷卡</h3>
+                    <ul class="text-slate-600 space-y-2 text-sm leading-relaxed">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>包含一般刷卡所有資訊</li>
+                        <li><i class="fa-solid fa-circle-check text-orange-500 mr-2"></i><strong>紅利扣抵金額</strong></li>
+                        <li><i class="fa-solid fa-circle-check text-orange-500 mr-2"></i><strong>扣抵點數</strong></li>
+                        <li class="mt-4 text-xs text-slate-400">※ 注意：此功能需刷卡銀行有配合紅利折抵服務</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-2">數位店務教育訓練中心 (Internal Training Material)</p>
+            <p class="text-sm">此網頁僅供內部同仁操作學習參考使用，請勿外流機密資訊。</p>
+        </div>
+    </footer>
+
+    <!-- 分頁切換 JavaScript 邏輯 -->
+    <script>
+        function openTab(evt, tabId) {
+            // 隱藏所有分頁內容
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // 移除所有按鈕的 active 狀態
+            const tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active", "bg-white", "text-slate-900", "shadow-sm");
+                tabBtns[i].classList.add("text-slate-500");
+            }
+
+            // 顯示當前選中的內容
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.remove("text-slate-500");
+            evt.currentTarget.classList.add("active", "bg-white", "text-slate-900", "shadow-sm");
+        }
+    </script>
+</body>
+</html>
