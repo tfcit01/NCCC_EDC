@@ -12,21 +12,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* 設置背景圖片層 - 確保 V3C.jpg 顯示在藍色區塊底層 */
-        .header-bg-image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: cover;
-            opacity: 0.2; /* 淡化處理，不影響文字閱覽 */
-            pointer-events: none;
-            z-index: 1;
-        }
         .header-content {
             position: relative;
             z-index: 10;
@@ -66,8 +51,8 @@
 
     <!-- 標題區與重要通知 -->
     <header class="bg-gradient-brand text-white py-12 md:py-16">
-        <!-- 崁入 V3C 照片作為淡化底圖 -->
-        <img src="V3C.JPG" alt="V3C Machine Background" class="header-bg-image">
+        <!-- 崁入 V3C 照片作為右側浮動元素 (帶有透明度、旋轉與圓角) -->
+        <img src="V3C.JPG" alt="V3C Machine Background" class="absolute -right-16 md:right-8 top-1/2 -translate-y-1/2 w-80 md:w-[32rem] opacity-30 rotate-[15deg] pointer-events-none z-0 rounded-3xl shadow-2xl mix-blend-overlay">
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 header-content">
             <div class="text-center mb-10">
@@ -280,7 +265,7 @@
                             </video>
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 bg-white relative">
-                            <img src="銀聯刷卡-按完密碼後的停留畫面，仍需手動按確認.jpg" alt="銀聯停留畫面" class="w-full h-auto object-cover">
+                            <img src="銀聯刷卡-按完密碼後的停留畫面，仍需手動按確認.JPG" alt="銀聯停留畫面" class="w-full h-auto object-cover">
                         </div>
                     </div>
                 </div>
@@ -299,7 +284,7 @@
                 <!-- 一般 -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                     <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
-                        <img src="信用卡簽單_一般刷卡.jpg" alt="一般簽單" class="w-full h-full object-cover">
+                        <img src="信用卡簽單_一般刷卡.JPG" alt="一般簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">一般刷卡</h3>
                     <p class="text-base text-slate-500 leading-relaxed">有卡號、授權碼、序號、調閱編號、端末機代號等重要資訊。</p>
@@ -307,7 +292,7 @@
                 <!-- 分期 -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                     <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
-                        <img src="信用卡簽單_分期刷卡.jpg" alt="分期簽單" class="w-full h-full object-cover">
+                        <img src="信用卡簽單_分期刷卡.JPG" alt="分期簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">分期刷卡</h3>
                     <p class="text-base text-slate-500 leading-relaxed">會有分期期數、首期金額、每期金額等資訊。</p>
@@ -315,7 +300,7 @@
                 <!-- 紅利 -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                     <div class="aspect-[3/4] bg-slate-100 rounded-xl mb-6 overflow-hidden border border-slate-200">
-                        <img src="信用卡簽單_紅利刷卡.jpg" alt="紅利簽單" class="w-full h-full object-cover">
+                        <img src="信用卡簽單_紅利刷卡.JPG" alt="紅利簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">紅利刷卡</h3>
                     <p class="text-base text-slate-500 leading-relaxed">會有紅利扣抵金額、扣抵點數等等資訊。</p>
