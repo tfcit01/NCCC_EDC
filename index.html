@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>刷卡機操作指南 | 數位教育訓練</title>
+    <title>聯信刷卡機V3C操作指南 | 教育訓練中心</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -44,30 +44,53 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-credit-card text-blue-600 text-xl"></i>
-                    <!-- 更新為教育訓練中心 -->
                     <span class="font-bold text-lg text-slate-800">教育訓練中心</span>
                 </div>
                 <div class="hidden md:flex space-x-6">
                     <a href="#menu-intro" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">選單介紹</a>
                     <a href="#transaction-demo" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">交易示範</a>
                     <a href="#receipt-guide" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">簽單解析</a>
+                    <a href="#official-doc" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">官方文件</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 標題區 -->
-    <header class="bg-gradient-brand text-white py-16 md:py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-                POS 刷卡機操作指南
-            </h1>
-            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-                三分鐘快速掌握機台選單、常見交易流程與簽單辨識，讓結帳流程順暢無阻。
-            </p>
-            <a href="#menu-intro" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 transition shadow-lg hover:shadow-xl">
-                開始學習 <i class="fa-solid fa-arrow-down ml-2"></i>
-            </a>
+    <!-- 標題區與重點清單 -->
+    <header class="bg-gradient-brand text-white py-12 md:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8">
+                    聯信刷卡機V3C操作指南
+                </h1>
+                
+                <!-- 重要資訊清單 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 md:p-8 max-w-3xl mx-auto text-left shadow-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-yellow-300">
+                        <i class="fa-solid fa-circle-exclamation"></i> 重要通知
+                    </h2>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 bg-yellow-400 text-blue-900 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mt-0.5">1</span>
+                            <span>聯信刷卡機更換時程：<span class="font-bold underline decoration-yellow-400">3/24 - 3/31</span></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 bg-yellow-400 text-blue-900 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mt-0.5">2</span>
+                            <span>不排除於營業時間進行更換，作業時間約 <span class="font-bold">15-20 分鐘</span></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 bg-yellow-400 text-blue-900 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mt-0.5">3</span>
+                            <span>新款刷卡機操作大致相同，如有不清楚的地方，可洽詢 <span class="font-bold bg-white/20 px-2 py-0.5 rounded">8101-8980</span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#menu-intro" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 transition shadow-lg hover:shadow-xl">
+                    開始學習 <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -265,7 +288,6 @@
                         <img src="信用卡簽單_一般刷卡.JPG" alt="一般簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">一般刷卡</h3>
-                    <!-- 內文放大為 text-base -->
                     <p class="text-base text-slate-500 leading-relaxed">有卡號、授權碼、序號、調閱編號、端末機代號等重要資訊。</p>
                 </div>
                 <!-- 分期 -->
@@ -274,7 +296,6 @@
                         <img src="信用卡簽單_分期刷卡.JPG" alt="分期簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">分期刷卡</h3>
-                    <!-- 內文放大為 text-base -->
                     <p class="text-base text-slate-500 leading-relaxed">會有分期期數、首期金額、每期金額等資訊。</p>
                 </div>
                 <!-- 紅利 -->
@@ -283,8 +304,30 @@
                         <img src="信用卡簽單_紅利刷卡.JPG" alt="紅利簽單" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-slate-800 text-lg mb-2 border-b pb-2">紅利刷卡</h3>
-                    <!-- 內文放大為 text-base -->
                     <p class="text-base text-slate-500 leading-relaxed">會有紅利扣抵金額、扣抵點數等等資訊。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 官方文件 -->
+        <section id="official-doc" class="scroll-mt-20">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Step 4</span>
+                <h2 class="text-3xl font-bold text-slate-800 mt-2">聯信官方操作文件</h2>
+                <div class="h-1 w-16 bg-blue-500 rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-blue-900 text-white rounded-3xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center gap-8 border border-blue-800">
+                <div class="flex-shrink-0 w-24 h-24 bg-blue-700/50 rounded-2xl flex items-center justify-center">
+                    <i class="fa-solid fa-file-pdf text-5xl text-red-400"></i>
+                </div>
+                <div class="flex-grow text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-2">版本操作簡表 (直式)_CASTLES V3C_101</h3>
+                    <p class="text-blue-200 text-lg mb-6">包含更詳細的機台硬體說明、特殊交易處理及障礙排除指南。</p>
+                    <!-- 設定 PDF 路徑 -->
+                    <a href="版本操作簡表(直式)_CASTLES V3C_101.PDF" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-3"></i> 立即開啟官方文件 (PDF)
+                    </a>
                 </div>
             </div>
         </section>
